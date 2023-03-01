@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Some title</title>
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    tags: 'all'
+  }
+};
+</script>
+<script type="text/javascript" async 
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+<style>
+body > * {
+  max-width: 42em;
+}
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  padding-left: 7.5em;
+  padding-right: 7.5em;
+}
+pre, code {
+  max-width: 50em;
+  font-family: monospace;
+}
+pre.oct-code {
+  border: 1px solid Grey;
+  padding: 5px;
+}
+pre.oct-code-output {
+  margin-left: 2em;
+}
+span.comment {
+  color: ForestGreen;
+}
+span.keyword {
+  color: Blue;
+}
+span.string {
+  color: DarkOrchid;
+}
+footer {
+  margin-top: 2em;
+  font-size: 80%;
+}
+a, a:visited {
+  color: Blue;
+}
+h2 {
+  font-family: "Roboto Condensed", serif;
+  margin-top: 1.5em;
+}
+h2 a, h2 a:visited {
+  color: Black;
+}
+</style>
+
+</head>
+<body>
+<h1>Some title</h1>
+
+<p>this is an example introduction for testing publish() in MATLAB.</p>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#node1">Plot something</a></li>
+<li><a href="#node2">This starts another section title</a></li>
+</ul>
+<h2><a id="node1">Plot something</a></h2>
+<pre class="oct-code">t = 0:0.01:2*pi;
+r = sin(2*t).*cos(2*t);
+polar(t,r,<span class="string">'--r'</span>);</pre>
+<img src="publish_test-1.png" alt="publish_test-1.png">
+<p>we <b>can</b> also display LaTeX $e^(i/pi) + 1 = 0$</p>
+<h2><a id="node2">This starts another section title</a></h2>
+<p>This is the <i>end</i> of this document.</p>
+
+<p><code>monospace</code></p>
+
+<footer>
+<hr>
+<a href="https://www.octave.org">Published with GNU Octave 7.3.0</a>
+</footer>
+<!--
+##### SOURCE BEGIN #####
+%% Some title
+% this is an example introduction for testing publish() in MATLAB.
+
+%% Plot something
+t = 0:0.01:2*pi;
+r = sin(2*t).*cos(2*t);
+polar(t,r,'--r');
+
+%%
+% we *can* also display LaTeX $e^(i/pi) + 1 = 0$
+
+%% This starts another section title
+% This is the _end_ of this document.
+
+%%
+% |monospace|
+##### SOURCE END #####
+-->
+</body>
+</html>
